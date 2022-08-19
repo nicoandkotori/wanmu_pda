@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_arrive_vouch_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+   >
+    <!--android:descendantFocusability="blocksDescendants"-->
+    <!--beforeDescendants-->
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/izSelect"
+            android:layout_width="30.0dip"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="条码"
+            android:textColor="@android:color/black"
+            android:clickable="false"
+            android:focusable="false"
+            android:textSize="14sp"></CheckBox>
+
+
+
+    <View
+        android:layout_width="1.5dip"
+        android:layout_height="fill_parent"
+        android:background="#B4B3B3"/>
+
+        <TextView
+            android:id="@+id/printer"
+            android:layout_width="220.0dip"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:inputType="text"
+            android:text="打印机"
+            android:textColor="@android:color/black"
+            android:textSize="15.0sp"></TextView>
+    </LinearLayout>
+</LinearLayout>

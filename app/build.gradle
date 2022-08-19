@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId 'com.myapplication'
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "wanmu.apk"
+        }
+    }
+
+    productFlavors {
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+/*    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            'src/main/res/layout/cooperate',
+                            'src/main/res/layout/production',
+                            'src/main/res/layout/assemble',
+                            'src/main/res/layout/warehouse',
+                            'src/main/res/layout',
+                            'src/main/res'
+                    ]
+        }
+    }*/
+}
+
+dependencies {
+    api 'com.github.gittjy:LoadingDialog:1.0.2'
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api 'com.squareup.okhttp3:okhttp:3.2.0'
+    api 'com.squareup.okio:okio:1.7.0'
+    api files('libs/fastjson-1.2.6.jar')
+    api files('libs/platform_sdk_v2.4.0810.jar')
+    api files('libs/mediatek-compatibility.jar')
+    api files('libs/zltd_common.jar')
+
+    api files('libs/gprintersdkv1.jar')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'junit:junit:4.12'
+    implementation 'com.rabbitmq:amqp-client:5.7.1'
+
+}

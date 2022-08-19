@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".WeighQueueActivity">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <com.myapplication.utils.TitleView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TabHost
+            android:id="@+id/myTabHost"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            >
+
+                            <EditText
+                                android:id="@+id/modId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:ems="10"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:textSize="18sp"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:layout_editor_absoluteY="265dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="屠宰单号"
+                                android:textSize="18sp"
+                                app:layout_constraintStart_toStartOf="parent"
+
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <EditText
+                                android:id="@+id/vouchCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="5"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:textSize="18sp"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+                                app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+                            <TextView
+                                android:id="@+id/textView67"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="订单日期"
+                                android:textSize="18sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/vouchCode"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <EditText
+                                android:id="@+id/vouchDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:ems="5"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:textSize="18sp"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView67"
+                                app:layout_constraintLeft_toRightOf="@+id/textView67" />
+
+
+                            <TextView
+                                android:id="@+id/textView73"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="货品名称"
+                                android:textSize="18sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                            <EditText
+                                android:id="@+id/invName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="5"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView73"
+                                app:layout_constraintLeft_toRightOf="@+id/textView73" />
+
+
+                            <TextView
+                                android:id="@+id/textView75"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="8dp"
+                                android:text="计划数量"
+                                android:textSize="18sp"
+                                app:layout_constraintStart_toEndOf="@+id/invName"
+                                app:layout_constraintTop_toBottomOf="@+id/textView4"
+
+                                />
+
+                            <EditText
+                                android:id="@+id/planQty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:ems="5"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:textSize="18sp"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView73"
+                                app:layout_constraintLeft_toRightOf="@+id/textView75" />
+                            <TextView
+                                android:id="@+id/textView71"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="批次"
+                                android:textSize="18sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+                            <EditText
+                                android:id="@+id/batchCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView71"
+                                app:layout_constraintLeft_toRightOf="@+id/textView71" />
+
+
+
+                            <TextView
+                                android:id="@+id/textView72"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="条码"
+                                android:textSize="18sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+                            <EditText
+                                android:id="@+id/barcode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="textPersonName"
+                                android:textSize="16sp"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView72"
+                                app:layout_constraintLeft_toRightOf="@+id/textView72" />
+
+
+
+                            <Button
+                                android:id="@+id/btnSelect1"
+                                android:layout_width="100dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@color/statusColor"
+                                android:text="确认条码"
+                                android:textColor="@color/color_white"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView72"
+                                app:layout_constraintLeft_toRightOf="@+id/batchCode" />
+
+                            <TextView
+                                android:id="@+id/textView_label_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="8dp"
+                                android:text="称重："
+                                android:textSize="28sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                            <TextView
+                                android:id="@+id/textView_number_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textSize="28sp"
+                                app:layout_constraintBaseline_toBaselineOf="@id/textView_label_weight"
+                                app:layout_constraintLeft_toRightOf="@+id/textView_label_weight" />
+
+
+
+                            <ListView
+                                android:id="@+id/list"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="8dp"
+                                android:cacheColorHint="@android:color/transparent"
+                                android:dividerHeight="3.0dip"
+                                android:drawSelectorOnTop="false"
+                                android:fadingEdgeLength="0.0sp"
+                                android:listSelector="@drawable/selector_listview"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                            <!--                    <RadioGroup-->
+                            <!--                        android:id="@+id/radioGroup"-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="wrap_content"-->
+                            <!--                        android:orientation="horizontal">-->
+                            <!--                    &lt;!&ndash;        RadioButton放到里面&ndash;&gt;-->
+                            <!--                   -->
+
+                            <!--                    </RadioButton>-->
+                            <!--                  -->
+
+
+                        </android.support.constraint.ConstraintLayout>
+
+
+
+                    </FrameLayout>
+
+            </LinearLayout>
+
+        </TabHost>
+    </LinearLayout>
+    　
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="80dp"
+                android:background="@android:color/holo_green_dark"
+                android:text="保存"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <Button
+                android:id="@+id/btnCanel"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="100dp"
+                android:background="@color/bg_color"
+                android:text="取消"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnSave"
+                app:layout_constraintStart_toEndOf="@+id/btnDelete" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".SearchMoOrderActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <com.myapplication.utils.TitleView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20.0sp"
+            android:gravity="center"
+            android:text="123"/>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dip"
+            android:background="#686867"/>
+
+
+        <ListView
+            android:id="@+id/search_order_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:dividerHeight="3.0dip"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:listSelector="@drawable/selector_listview"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="80dp"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btnCanel"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="100dp"
+            android:background="@color/bg_color"
+            android:text="取消"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnSave"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

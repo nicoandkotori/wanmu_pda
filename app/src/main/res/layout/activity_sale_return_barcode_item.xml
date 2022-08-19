@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_asmb_support_dismantle_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    >
+    <!--android:descendantFocusability="blocksDescendants"-->
+    <!--beforeDescendants-->
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/packCode"
+                        android:layout_width="350.0dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="箱码"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"></TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/barcode"
+                        android:layout_width="200.0dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="卷号"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/invStd"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="规格型号"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"></TextView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/invName"
+                        android:layout_width="200.0dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="型号"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/qty"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="米数"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"></TextView>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

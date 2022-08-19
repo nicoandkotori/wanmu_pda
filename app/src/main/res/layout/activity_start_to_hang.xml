@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".StartToHangActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.myapplication.utils.TitleView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TabHost
+            android:id="@+id/myTabHost"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal" />
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/modId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:ems="10"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteY="265dp" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="屠宰批次"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/et_batch_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="5"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+                            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+                        <TextView
+                            android:id="@+id/textView67"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="过磅重量"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/et_batch_code"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/et_slaughter_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:ems="5"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/textView67"
+                            app:layout_constraintLeft_toRightOf="@+id/textView67" />
+
+
+                        <TextView
+                            android:id="@+id/textView73"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="耳标编号"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                        <EditText
+                            android:id="@+id/et_card_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="5"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textPersonName"
+                            android:textSize="16sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/textView73"
+                            app:layout_constraintLeft_toRightOf="@+id/textView73" />
+
+
+                        <TextView
+                            android:id="@+id/textView75"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="8dp"
+                            android:text="过磅时间"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/et_card_code"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4"
+
+                            />
+
+                        <EditText
+                            android:id="@+id/et_slaughter_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:ems="5"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textPersonName"
+                            android:textSize="18sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/textView73"
+                            app:layout_constraintLeft_toRightOf="@+id/textView75" />
+
+
+                        <TextView
+                            android:id="@+id/tv_rfid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="芯片ID"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+
+                        <EditText
+                            android:id="@+id/et_rfid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="5"
+                            android:focusable="true"
+                            android:focusableInTouchMode="false"
+                            android:inputType="textPersonName"
+                            android:textSize="16sp"
+                            app:layout_constraintBaseline_toBaselineOf="@+id/tv_rfid"
+                            app:layout_constraintLeft_toRightOf="@+id/tv_rfid" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_left_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_rfid">
+
+                            <RadioButton
+                                android:id="@+id/left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="150dp"
+                                android:checked="true"
+                                android:text="左" />
+
+                            <RadioButton
+                                android:id="@+id/right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="0dp"
+                                android:text="右" />
+
+                        </RadioGroup>
+
+
+                    </android.support.constraint.ConstraintLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="80dp"
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/color_white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btnCanel"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="100dp"
+            android:background="@color/bg_color"
+            android:text="取消"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnSave"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete" />
+
+    </LinearLayout>
+
+</LinearLayout>

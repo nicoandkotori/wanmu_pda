@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".WeighQueueActivity">
+
+    <com.myapplication.utils.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TabHost
+        android:id="@+id/myTabHost"
+        android:layout_width="match_parent"
+        android:layout_height="515dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="0"
+                android:orientation="horizontal"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:id="@+id/sourceType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="265dp" />
+                    <EditText
+                        android:id="@+id/inWhCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="265dp" />
+
+                    <EditText
+                        android:id="@+id/outWhCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="265dp" />
+                    <EditText
+                        android:id="@+id/vouchId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="265dp" />
+
+
+                    <EditText
+                        android:id="@+id/inDepCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="265dp" />
+
+                    <EditText
+                        android:id="@+id/outDepCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="265dp" />
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="操作员"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/operateUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ems="5"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+                        app:layout_constraintStart_toEndOf="@+id/textView4"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="日期"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/operateUser"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/vouchDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:ems="7"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView67"
+                        app:layout_constraintLeft_toRightOf="@+id/textView67" />
+
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="转出仓"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <EditText
+                        android:id="@+id/outWhName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView73"
+                        app:layout_constraintLeft_toRightOf="@+id/textView73" />
+
+
+                    <TextView
+                        android:id="@+id/textView75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="转入仓"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/outWhName"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <EditText
+                        android:id="@+id/inWhName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="6"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView73"
+                        app:layout_constraintLeft_toRightOf="@+id/textView75" />
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="转出部门"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+                    <EditText
+                        android:id="@+id/outDepName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView53"
+                        app:layout_constraintLeft_toRightOf="@+id/textView53" />
+
+
+                    <TextView
+                        android:id="@+id/textView54"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="转入部门"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/outDepName"
+                        app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+                    <EditText
+                        android:id="@+id/inDepName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="5"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView53"
+                        app:layout_constraintLeft_toRightOf="@+id/textView54" />
+
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="单号"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+                    <EditText
+                        android:id="@+id/vouchCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="8"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="textPersonName"
+                        android:textSize="16sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView71"
+                        app:layout_constraintLeft_toRightOf="@+id/textView71" />
+
+
+                    <Button
+                        android:id="@+id/btnSelect"
+                        android:layout_width="65dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@android:color/holo_blue_light"
+                        android:text="参照"
+                        android:textColor="@color/color_white"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView71"
+                        app:layout_constraintLeft_toRightOf="@+id/vouchCode" />
+
+                    <TextView
+                        android:id="@+id/textView78"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="扫描模式"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+
+
+                    <ListView
+                        android:id="@+id/list"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:dividerHeight="3.0dip"
+                        android:drawSelectorOnTop="false"
+                        android:fadingEdgeLength="0.0sp"
+                        android:listSelector="@drawable/selector_listview"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView78" />
+                    <!--                    <RadioGroup-->
+                    <!--                        android:id="@+id/radioGroup"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:orientation="horizontal">-->
+                    <!--                    &lt;!&ndash;        RadioButton放到里面&ndash;&gt;-->
+                    <!--                   -->
+
+                    <!--                    </RadioButton>-->
+                    <!--                  -->
+
+                    <CheckBox
+                        android:id="@+id/scanAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="扫描"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView78"
+                        app:layout_constraintStart_toEndOf="@+id/textView78" />
+
+                    <CheckBox
+                        android:id="@+id/scanDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="删除"
+                        android:textColor="@color/color_c61a04"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView78"
+                        app:layout_constraintStart_toEndOf="@+id/scanAdd" />
+
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ListView
+                        android:id="@+id/listbarcode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:dividerHeight="3.0dip"
+                        android:drawSelectorOnTop="false"
+                        android:fadingEdgeLength="0.0sp"
+                        android:listSelector="@drawable/selector_listview"></ListView>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/tab21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="32dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="保存"
+            android:textColor="@color/color_white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/holo_red_dark"
+            android:text="删行"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnSave"
+            app:layout_constraintLeft_toRightOf="@+id/btnSave" />
+
+        <Button
+            android:id="@+id/btnCanel"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/bg_color"
+            android:text="取消"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btnSave"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>

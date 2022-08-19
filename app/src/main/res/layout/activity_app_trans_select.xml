@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WeighQueueActivity">
+    <com.myapplication.utils.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="日期"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/startDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+            app:layout_constraintLeft_toRightOf="@+id/textView11" />
+
+
+        <EditText
+            android:id="@+id/endDate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+            app:layout_constraintLeft_toRightOf="@+id/textView3" />
+
+
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="查询"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="确认"
+            app:layout_constraintStart_toEndOf="@+id/btnSelect"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="单号"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <EditText
+            android:id="@+id/vouchCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+
+            app:layout_constraintLeft_toRightOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="到"
+            app:layout_constraintStart_toEndOf="@+id/startDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:dividerHeight="3.0dip"
+            android:drawSelectorOnTop="false"
+            android:fadingEdgeLength="0.0sp"
+            android:listSelector="@drawable/selector_listview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelect" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAll"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+
+<!--            android:text="全选"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/btnYes"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView29" />-->
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>
+
