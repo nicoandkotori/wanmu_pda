@@ -5,6 +5,9 @@ import android.support.v7.app.AlertDialog;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.myapplication.HttpClient.ResultDesc;
+
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -22,14 +25,18 @@ public class ActivityHelper {
     }
 
     /**
-     * 设置文本
+     * TextView设置文本
      *
      * @param view  视图
      * @param value 值
      */
     public void setText(TextView view, String value){
         if (!StringUtil.isEmpty(value)){
-            view.setText(value);
+            //内容相同则不更新
+            if (!value.contentEquals(view.getText())){
+                view.setText(value);
+            }
+
         }
     }
 
@@ -42,6 +49,18 @@ public class ActivityHelper {
     public void setText(TextView view, Date value){
         if (value != null){
             view.setText(DateUntil.getChineseDate(value));
+        }
+    }
+
+    /**
+     * 设置文本
+     *
+     * @param view  视图
+     * @param value 值
+     */
+    public void setText(TextView view, BigDecimal value){
+        if (value != null){
+            view.setText(value.toString());
         }
     }
 
@@ -64,5 +83,21 @@ public class ActivityHelper {
         builder.setMessage(text);
         builder.setPositiveButton("确定", null);
         builder.show();
+    }
+
+    /**
+     * 判断http请求响应数据是否为空
+     *
+     * @param resultDesc 结果desc
+     * @return boolean
+     */
+    public boolean isResultDataEmpty(ResultDesc resultDesc){
+        if (resultDesc.getresult() == null){
+            return true;
+        }
+        if (StringUtil.isEmpty(resultDesc.getresult().toString())){
+            return true;
+        }
+        return false;
     }
 }

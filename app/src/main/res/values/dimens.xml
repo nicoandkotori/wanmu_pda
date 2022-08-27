@@ -65,4 +65,5 @@
     <dimen name="dialog_width">300dp</dimen>
     <!-- 通用 圆角 -->
     <dimen name="radius">5dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

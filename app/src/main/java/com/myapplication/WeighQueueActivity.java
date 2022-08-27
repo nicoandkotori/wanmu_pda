@@ -39,6 +39,7 @@ import com.myapplication.utils.RabbitMqDataReceiver;
 import com.myapplication.utils.StringUrl;
 import com.myapplication.utils.TitleView;
 
+import java.lang.ref.WeakReference;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -103,7 +104,14 @@ public class WeighQueueActivity extends FragmentActivity {
 
 
     //定义内部类 ReceiveWeightHandler，用于异步更新称重信息
-    class ReceiveWeightHandler extends Handler {
+    private class ReceiveWeightHandler extends Handler {
+
+        //防止内存泄露
+        private final WeakReference<WeighQueueActivity> activity;
+
+        public ReceiveWeightHandler(WeighQueueActivity activity) {
+            this.activity = new WeakReference<WeighQueueActivity>(activity) ;
+        }
 
         @Override
         public void handleMessage(Message msg) {
@@ -163,7 +171,7 @@ public class WeighQueueActivity extends FragmentActivity {
         //条码列表获取
         mListView = (ListView) this.findViewById(R.id.list);
         //接收称重信息
-        ReceiveWeightHandler receiveWeightHandler = new ReceiveWeightHandler();
+        ReceiveWeightHandler receiveWeightHandler = new ReceiveWeightHandler(this);
         rabbitMqDataReceiver.beginConsume(EnumUtils.RABBIT_MQ_QUEUE.QUEUE_WEIGHT_ONE, receiveWeightHandler);
         //更新数据
         mbtnSave.setOnClickListener(new View.OnClickListener() {

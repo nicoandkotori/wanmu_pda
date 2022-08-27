@@ -7,7 +7,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:weightSum="1"
-    tools:context=".StartToHangActivity">
+    tools:context=".MidSectionActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -102,7 +102,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <EditText
-                            android:id="@+id/et_slaughter_weight"
+                            android:id="@+id/et_midSectionWeight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"
@@ -200,20 +200,20 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/tv_rfid">
 
-<!--                            <RadioButton-->
-<!--                                android:id="@+id/left"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:layout_marginRight="150dp"-->
-<!--                                android:checked="true"-->
-<!--                                android:text="左" />-->
+                                    <RadioButton
+                                        android:id="@+id/rb_left"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="150dp"
+                                        android:checked="true"
+                                        android:text="左" />
 
-<!--                            <RadioButton-->
-<!--                                android:id="@+id/right"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:layout_marginRight="0dp"-->
-<!--                                android:text="右" />-->
+                                    <RadioButton
+                                        android:id="@+id/rb_right"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="0dp"
+                                        android:text="右" />
 
                         </RadioGroup>
 

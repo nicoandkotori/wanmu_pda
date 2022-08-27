@@ -29,16 +29,11 @@ import static com.myapplication.Scan.Sound.context;
  */
 public class WeightQueueActivityPreHandler implements PreHandle {
 
-    private Intent intent;
     private Fragment fragment;
 
     public WeightQueueActivityPreHandler() {
     }
 
-    @Override
-    public void setIntent(Intent intent) {
-        this.intent = intent;
-    }
 
     @Override
     public void setFragment(Fragment fragment) {
@@ -48,8 +43,6 @@ public class WeightQueueActivityPreHandler implements PreHandle {
 
     @Override
     public void handle() {
-        //由于网络请求无法在主线程中进行，因此会先进入WeighQueueActivity，此时传递一个需要让其等会销毁的flag
-        intent.putExtra("destroyFlag",true);
         MoOrderInfo queryData = new MoOrderInfo();
         Map<String,String> queryMap = new HashMap<>();
         //查询当天所有批次

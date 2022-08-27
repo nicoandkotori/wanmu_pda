@@ -426,4 +426,15 @@ public class SlaughterInfo implements Serializable {
         sb.append("]");
         return sb.toString();
     }
+
+    /**
+     * 转换为二分体信息
+     *
+     * @param midSectionInfo 二分体信息
+     */
+    public void convertToMidSectionInfo(MidSectionInfo midSectionInfo){
+        midSectionInfo.setBatchCode(batchCode);
+        midSectionInfo.setMoDetailId(moDetailId);
+        midSectionInfo.setSlaughterId(id);
+    }
 }

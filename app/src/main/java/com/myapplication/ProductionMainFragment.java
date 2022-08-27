@@ -138,7 +138,7 @@ public class ProductionMainFragment extends Fragment {
             Intent intent = new Intent(context, cls);
             //查询当天的批次，如果只有一个批次信息，直接进入activity，否则跳转到批次查询页面选择批次
             EnterActivityPreHandler preHandler = EnterActivityPreHandler.getInstance();
-            preHandler.preHandle(cls,intent,this);
+            preHandler.preHandle(cls,this);
 
         }catch (Exception e){
             e.printStackTrace();

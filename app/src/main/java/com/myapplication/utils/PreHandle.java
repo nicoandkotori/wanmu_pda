@@ -17,7 +17,6 @@ public interface PreHandle {
      */
     void handle();
 
-    void setIntent(Intent intent);
 
     void setFragment(Fragment fragment);
 }
